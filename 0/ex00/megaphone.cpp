@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 18:14:34 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/09 19:05:23 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/18 19:47:01 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ char *string_upper(char *str)
         {
             string[i] = str[i] - 32;
         }
+		else
+			string[i] = str[i];
         i++;
     }
     string[i] = '\0';
