@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/09 18:56:06 by alromero          #+#    #+#             */
-/*   Updated: 2020/05/18 13:46:41 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/18 20:41:18 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,11 @@ int main()
 					prompter(contacto[j]);
 			std::cout << "Enter the index: " << std::endl;
 			std::cin >> index;
+			if (std::cin.fail())
+  			{
+				std::cin.clear();
+    			index = 0;
+			}
 			std::cin.ignore(10, '\n');
 			if ((index > 0 && index <= 8) && (index <= (i + 1) || flag))
 				prompter_two(contacto[index - 1]);
