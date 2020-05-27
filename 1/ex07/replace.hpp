@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/20 18:26:44 by alromero          #+#    #+#             */
-/*   Updated: 2020/05/21 13:47:03 by alromero         ###   ########.fr       */
+/*   Created: 2020/05/25 19:11:49 by alromero          #+#    #+#             */
+/*   Updated: 2020/05/25 19:33:46 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include "ZombieHorde.hpp"
-#include <iostream>
+#ifndef REPLACE_HPP
+#define REPLACE_HPP
 
-int main()
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
+class replace
 {
-	ZombieHorde horda(5);
-	horda.announce();
-	return (0);
-}
+	private:
+		static std::string	newFilename(std::string filename);
+	public:
+		replace();
+		~replace();
+		static void			ft_replace(std::string filename, std::string s1, std::string s2);
+};
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:00:34 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/20 15:17:30 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/21 13:36:53 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,18 @@
 
 class Zombie
 {
+	private:
+		std::string type;
+		std::string name;
 	public:
-	std::string type;
-	std::string name;
-	void announce();
+		Zombie();
+		Zombie(std::string type, std::string name);
+		~Zombie();
+		void 		announce();
+		void		setType(std::string type);
+		void 		setName(std::string name);
+		std::string getType(void);
+		std::string getName(void);
 };
 
 # endif

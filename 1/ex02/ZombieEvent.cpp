@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:00:38 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/20 15:16:45 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/19 16:45:23 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ Zombie *ZombieEvent::randomChump(void)
 {
 	Zombie *random;
 
-	random->name = random_name();
-	std::cout << "MY NAME IS " << random->name << std::endl;
+	random->setName(random_name());
+	std::cout << "MY NAME IS " << random->getName() << std::endl;
 	return (random);
 }
 
-void 		ZombieEvent::setZombieType(std::string type)
+void 	ZombieEvent::setZombieType(std::string type)
 {
 	this->type = type;
 }
@@ -50,7 +50,12 @@ Zombie *ZombieEvent::newZombie(std::string name)
 	Zombie *clase;
 
 	clase = new Zombie;
-	clase->name = name;
-	clase->type = this->type;
+	clase->setName(name);
+	clase->setType(type);
 	return (clase);
+}
+
+std::string	ZombieEvent::getType(void)
+{
+	return (this->type);
 }

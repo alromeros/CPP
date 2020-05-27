@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:00:28 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/20 15:19:49 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/26 17:49:07 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,15 @@
 
 int main()
 {
-	std::string type;
-	std::string name;
-
-	Zombie 		*muerto;
-	muerto = new Zombie;
-	ZombieEvent prueba;
+	ZombieEvent 	prueba;
+	Zombie 			*muerto = new Zombie("Fantasma", "Celia");
+	Zombie			muertoTwo("Psíquico", "Pedro");
 	muerto->announce();
-	prueba.randomChump();
-	prueba.setZombieType("Gordo");
+	prueba.setZombieType("Fuego");
+	muerto = prueba.newZombie("Elvira");
+	muerto->announce();
+	muerto = prueba.randomChump();
+	prueba.setZombieType("Planta");
 	delete(muerto);
-	muerto = prueba.newZombie("Pepito");
-	muerto->announce();
+	muertoTwo.announce();
 }

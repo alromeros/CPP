@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 14:32:38 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/14 17:54:53 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/19 13:46:49 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,20 @@
 void	ponyOnTheHeap(void)
 {
 	Pony *horsie = new Pony;
-	horsie->colour = "black";
-	horsie->pony_name = "n-word";
-	horsie->tail_lenght = 20;
-	horsie->health_level = 10;
+	horsie->setColour("black");
+	horsie->setPonyName("Dingus");
+	horsie->setTailLenght(20);
+	horsie->setHealthLevel(10);
 	delete horsie;
 }
 
 void	ponyOnTheStack(void)
 {
 	Pony horsie;
-	horsie.colour = "yellow";
-	horsie.pony_name = "Heavenly Custard";
-	horsie.tail_lenght = 5;
-	horsie.health_level = 20;
+	horsie.setColour("yellow");
+	horsie.setPonyName("Custard");
+	horsie.setTailLenght(5);
+	horsie.setHealthLevel(20);
 }
 
 int		main()

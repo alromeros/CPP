@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:00:40 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/20 15:14:23 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/19 14:34:38 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,13 @@
 
 class ZombieEvent
 {
+	private:
+		std::string	type;
 	public:
-	std::string	type;
-	void 		setZombieType(std::string type);
-	Zombie		*newZombie(std::string name);
-	Zombie		*randomChump(void);
+		void 		setZombieType(std::string type);
+		std::string	getType(void);
+		Zombie		*newZombie(std::string name);
+		Zombie		*randomChump(void);
 };
 
 #endif
