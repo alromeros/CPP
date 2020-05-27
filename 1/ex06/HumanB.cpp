@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 12:43:03 by alromero          #+#    #+#             */
-/*   Updated: 2020/04/24 14:44:45 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/27 14:57:56 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,14 @@ weapon(NULL)
 void	HumanB::setWeapon(const Weapon &weapon)
 {
 	this->weapon = &weapon;
+}
+
+void		HumanB::setName(std::string name)
+{
+	this->name = name;
+}
+
+std::string	HumanB::getName(void)
+{
+	return (this->name);
 }
