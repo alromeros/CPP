@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 13:06:28 by alromero          #+#    #+#             */
-/*   Updated: 2020/05/21 16:50:52 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/27 14:27:26 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,18 @@ std::string Brain::identify() const
 
 Brain::Brain(void) 
 {
-	
+}
+
+Brain::~Brain(void)
+{
+}
+
+void	Brain::setIq(int iq)
+{
+	this->iq = iq;
+}
+
+int		Brain::getIq(void)
+{
+	return (this->iq);
 }

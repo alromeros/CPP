@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 15:02:21 by alromero          #+#    #+#             */
-/*   Updated: 2020/05/25 20:08:44 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/27 14:33:32 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,11 @@ std::string	replace::newFilename(std::string filename)
 		i = filename.find_last_of('/');
 	else
 		i = 0;
-	for (i; i < filename.length(); i++)
+	while (i < filename.length())
+	{
 		filename[i] = toupper(filename[i]);
+		i++;
+	}
 	temp.append(filename);
 	temp.append(".replace");
 	return (temp);

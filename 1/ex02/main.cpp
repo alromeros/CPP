@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/14 18:00:28 by alromero          #+#    #+#             */
-/*   Updated: 2020/05/26 17:49:07 by alromero         ###   ########.fr       */
+/*   Updated: 2020/05/27 14:06:36 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main()
 	Zombie			muertoTwo("Psíquico", "Pedro");
 	muerto->announce();
 	prueba.setZombieType("Fuego");
+	delete(muerto);
 	muerto = prueba.newZombie("Elvira");
 	muerto->announce();
 	muerto = prueba.randomChump();
