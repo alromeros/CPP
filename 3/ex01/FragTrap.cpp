@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 15:33:28 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 13:31:31 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/11 13:30:58 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,6 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 	}
 	else
 		std::cout << this->name << " is broken and can't do anything!" << std::endl;
-	
 }
 
 void FragTrap::setHitPoints( int points )

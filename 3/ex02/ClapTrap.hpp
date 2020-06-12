@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/15 15:07:01 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/06 14:16:01 by alromero         ###   ########.fr       */
+/*   Created: 2020/06/04 17:24:45 by alromero          #+#    #+#             */
+/*   Updated: 2020/06/06 14:15:08 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 #include <ctime>
 
-class FragTrap
+class ClapTrap
 {
-	private:
+	protected:
 		int hitPoints;
 		int maxHitPoints;
 		int energyPoints;
@@ -29,18 +29,16 @@ class FragTrap
 		int rangedAttackDamage;
 		int armorDamageReduction;
 	public:
-		FragTrap();
-		FragTrap(std::string const &str);
-		FragTrap( const FragTrap &copy );
+		ClapTrap();
+		ClapTrap(std::string const &str);
+		ClapTrap( const ClapTrap &f );
 		void rangedAttack(std::string const & target);
 		void meleeAttack(std::string const & target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
-		FragTrap &operator =(const FragTrap &copy);
-		~FragTrap();
-
-		void	vaulthunter_dot_exe(std::string const & target);
-
+		ClapTrap &operator =(const ClapTrap &f);
+		~ClapTrap();
+		
 		void setHitPoints( int points );
 		void setMaxHitPoints(int points);
 		void setEnergyPoints(int points);
