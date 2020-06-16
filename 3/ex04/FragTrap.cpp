@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 15:33:28 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 13:46:06 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 20:33:19 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,32 @@ FragTrap&	FragTrap::operator =(const FragTrap &copy)
 	this->armorDamageReduction = copy.armorDamageReduction;
 	this->name = copy.name;
 	return (*this);
+}
+
+void 		FragTrap::rangedAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
+		<<	target << " at range, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 5;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
+}
+
+void FragTrap::meleeAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
+		<<	target << " at melee, causing " << this->meleeAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 10;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
 }
 
 FragTrap::~FragTrap()

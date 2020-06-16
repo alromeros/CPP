@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 16:23:04 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 13:46:39 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 20:37:02 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,32 @@ ScavTrap&	ScavTrap::operator =(const ScavTrap &copy)
 ScavTrap::~ScavTrap()
 {
 	std::cout << this->name << " was destroyed by alromero" << std::endl;
+}
+
+void 		ScavTrap::rangedAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"I will prove to you my robotic superiority!\" after attacking " 
+		<<	target << " at range, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 5;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
+}
+
+void ScavTrap::meleeAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"Woohoo! In your face!\" after attacking " 
+		<<	target << " at melee, causing " << this->meleeAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 10;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
 }
 
 void	ScavTrap::challengeNewcomer(void)

@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 15:33:28 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 13:12:18 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 12:57:20 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,32 @@ FragTrap&	FragTrap::operator =(const FragTrap &copy)
 FragTrap::~FragTrap()
 {
 	std::cout << this->name << " was destroyed by alromero" << std::endl;
+}
+
+void 		FragTrap::rangedAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
+		<<	target << " at range, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 5;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
+}
+
+void FragTrap::meleeAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
+		<<	target << " at melee, causing " << this->meleeAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 10;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
 }
 
 void	FragTrap::vaulthunter_dot_exe(std::string const & target)

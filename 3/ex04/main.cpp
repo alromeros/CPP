@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 17:11:02 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/12 18:39:55 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 21:03:49 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,9 @@ int	main()
 	super.ninjaShoebox(frag);
 	super.ninjaShoebox(scav);
 	super.ninjaShoebox(ninja);
+	super.meleeAttack("Sophie");
+	super.rangedAttack("Kanye");
+	super.ninjaShoebox(frag);
 	super.vaulthunter_dot_exe("Kanye");
 	super.takeDamage(80);
 	

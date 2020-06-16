@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 16:23:08 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/05 21:12:24 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 20:32:48 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class ScavTrap: public virtual ClapTrap
 		ScavTrap &operator =(const ScavTrap &copy);
 		~ScavTrap();
 		void	challengeNewcomer(void);
+		void rangedAttack(std::string const & target);
+		void meleeAttack(std::string const & target);
 };
 
 #endif

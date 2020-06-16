@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 18:59:26 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 13:43:05 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 21:05:26 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,32 @@ NinjaTrap&	NinjaTrap::operator =(const NinjaTrap &copy)
 	return (*this);
 }
 
+void 		NinjaTrap::rangedAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"Now I will dominate!\" after attacking " 
+		<<	target << " at range, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 5;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
+}
+
+void 		NinjaTrap::meleeAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"Don't bother with plastic surgery - there's NO fixing that!\" after attacking " 
+		<<	target << " at melee, causing " << this->meleeAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 10;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
+}
+
 NinjaTrap::~NinjaTrap()
 {
 	std::cout << this->name << " was destroyed by alromero" << std::endl;
@@ -82,40 +108,96 @@ NinjaTrap::~NinjaTrap()
 
 void NinjaTrap::ninjaShoebox(NinjaTrap& ninja)
 {
-	ninja.hitPoints -= 20;
-	if (ninja.hitPoints < 0)
-		ninja.hitPoints = 0;
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"殺してやる！\" after attacking " 
+		<<	ninja.name << " with a shuriken-shaped gear, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;	
+		ninja.hitPoints -= 20;
+		if (ninja.hitPoints < 0)
+			ninja.hitPoints = 0;
+	}
+	else
+	{	
+		ninja.hitPoints -= 99;
+		if (ninja.hitPoints < 0)
+			ninja.hitPoints = 0;
+		std::cout << this->name << "'s autodestruction plan was activated. "
+		<<	ninja.name << " reveived 99 points of damage" << std::endl;
+	}
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap& frag)
 {
 	int temp;
 
-	temp = frag.getHitPoints();
-	temp -= 20;
-	if (temp < 0)
-		temp = 0;
-	frag.setHitPoints(temp);
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"殺してやる！\" after attacking " 
+		<<	frag.getName() << " with a shuriken-shaped gear, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		temp = frag.getHitPoints() - 20;
+		if (temp < 0)
+			temp = 0;	
+		frag.setHitPoints(temp);
+	}
+	else
+	{	
+		temp = frag.getHitPoints() - 99;
+		if (temp < 0)
+			temp = 0;	
+		frag.setHitPoints(temp);
+		std::cout << this->name << "'s autodestruction plan was activated. "
+		<<	frag.getName() << " reveived 99 points of damage" << std::endl;
+	}
 }
 
 void NinjaTrap::ninjaShoebox(ScavTrap& scav)
 {
 	int temp;
 
-	temp = scav.getHitPoints();
-	temp -= 20;
-	if (temp < 0)
-		temp = 0;
-	scav.setHitPoints(temp);
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"殺してやる！\" after attacking " 
+		<<	scav.getName() << " with a shuriken-shaped gear, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		temp = scav.getHitPoints() - 20;
+		if (temp < 0)
+			temp = 0;	
+		scav.setHitPoints(temp);
+	}
+	else
+	{	
+		temp = scav.getHitPoints() - 99;
+		if (temp < 0)
+			temp = 0;	
+		scav.setHitPoints(temp);
+		std::cout << this->name << "'s autodestruction plan was activated. "
+		<<	scav.getName() << " reveived 99 points of damage" << std::endl;
+	}
 }
 
 void NinjaTrap::ninjaShoebox(ClapTrap& clap)
 {
 	int temp;
 
-	temp = clap.getHitPoints();
-	temp -= 20;
-	if (temp < 0)
-		temp = 0;
-	clap.setHitPoints(temp);
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"殺してやる！\" after attacking " 
+		<<	clap.getName() << " with a shuriken-shaped gear, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		temp = clap.getHitPoints() - 20;
+		if (temp < 0)
+			temp = 0;	
+		clap.setHitPoints(temp);
+	}
+	else
+	{	
+		temp = clap.getHitPoints() - 99;
+		if (temp < 0)
+			temp = 0;	
+		clap.setHitPoints(temp);
+		std::cout << this->name << "'s autodestruction plan was activated. "
+		<<	clap.getName() << " reveived 99 points of damage" << std::endl;
+	}
 }

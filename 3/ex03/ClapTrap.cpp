@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 17:23:46 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 13:31:42 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/16 11:24:19 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,32 +73,6 @@ ClapTrap&	ClapTrap::operator =(const ClapTrap &copy)
 	return (*this);
 }
 
-void 		ClapTrap::rangedAttack(std::string const & target)
-{
-	if (this->hitPoints > 0)
-	{
-		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
-		<<	target << " at range, causing " << this->rangedAttackDamage <<
-		" points of damage!" << std::endl;
-		this->energyPoints -= 5;
-	}
-	else
-		std::cout << this->name << " is broken and can't do anything!" << std::endl;
-}
-
-void ClapTrap::meleeAttack(std::string const & target)
-{
-	if (this->hitPoints > 0)
-	{
-		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
-		<<	target << " at melee, causing " << this->meleeAttackDamage <<
-		" points of damage!" << std::endl;
-		this->energyPoints -= 10;
-	}
-	else
-		std::cout << this->name << " is broken and can't do anything!" << std::endl;
-}
-
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (this->hitPoints > 0)
@@ -120,6 +94,32 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	}
 	else
 		std::cout << this->name << " is broken and even his corpse can't take damage" << std::endl;
+}
+
+void 		ClapTrap::rangedAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
+		<<	target << " at range, causing " << this->rangedAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 5;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
+}
+
+void 		ClapTrap::meleeAttack(std::string const & target)
+{
+	if (this->hitPoints > 0)
+	{
+		std::cout << this->name << " said: \"AAAAAAAAAAAAARGHH\" after attacking " 
+		<<	target << " at melee, causing " << this->meleeAttackDamage <<
+		" points of damage!" << std::endl;
+		this->energyPoints -= 10;
+	}
+	else
+		std::cout << this->name << " is broken and can't do anything!" << std::endl;
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)

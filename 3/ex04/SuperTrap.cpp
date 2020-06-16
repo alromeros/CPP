@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 19:09:47 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/12 18:38:08 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 21:02:05 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,14 @@ SuperTrap& SuperTrap::operator=(const SuperTrap& other)
 	this->armorDamageReduction = other.armorDamageReduction;
 	this->name = other.name;
 	return (*this);
+}
+
+void SuperTrap::rangedAttack(std::string const & target)
+{
+	this->FragTrap::rangedAttack(target);
+}
+
+void SuperTrap::meleeAttack(std::string const & target)
+{
+	this->NinjaTrap::meleeAttack(target);
 }

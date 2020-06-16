@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 15:07:01 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/04 18:27:44 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/15 12:56:24 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class FragTrap: public ClapTrap
 		FragTrap( const FragTrap &f );
 		FragTrap &operator =(const FragTrap &f);
 		~FragTrap();
+
+		void rangedAttack(std::string const & target);
+		void meleeAttack(std::string const & target);
 		void	vaulthunter_dot_exe(std::string const & target);
 };
 

@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/04 17:24:45 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/11 16:27:14 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/16 11:25:06 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ class ClapTrap
 		ClapTrap();
 		ClapTrap(std::string const &str);
 		ClapTrap( const ClapTrap &f );
-		void rangedAttack(std::string const & target);
-		void meleeAttack(std::string const & target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
+		void rangedAttack(std::string const & target);
+		void meleeAttack(std::string const & target);
 		ClapTrap &operator =(const ClapTrap &f);
 		~ClapTrap();
 
