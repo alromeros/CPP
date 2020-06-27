@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 16:47:33 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/06 19:37:35 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/28 00:40:19 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ Peon::Peon()
 }
 
 Peon::Peon(std::string const name)
-: Victim{name}
+: Victim(name)
 {
 	std::cout << "Zong zog." << std::endl;
 }
 
 Peon::Peon(const Peon& other)
-: Victim{other}
+: Victim(other)
 {
 	std::cout << "Zong zog." << std::endl;
 }

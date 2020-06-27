@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 11:26:33 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/26 14:28:33 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/28 00:45:01 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class MateriaSource : public IMateriaSource
 {
-	private:
+	/*private:
 		AMateria **slot;
 	public:
 		~MateriaSource();
@@ -26,7 +26,19 @@ class MateriaSource : public IMateriaSource
 		MateriaSource& operator=( MateriaSource const &other );
 		
 		void learnMateria(AMateria*);
-		AMateria* createMateria(std::string const & type);
+		AMateria* createMateria(std::string const & type);*/
+		private:
+	int amount;
+	AMateria *sources[4];
+public:
+	MateriaSource();
+	MateriaSource(MateriaSource const &other);
+	virtual ~MateriaSource();
+
+	MateriaSource &operator=(MateriaSource const &other);
+
+	void learnMateria(AMateria *m);
+	AMateria* createMateria(std::string const &type);
 };
 
 #endif

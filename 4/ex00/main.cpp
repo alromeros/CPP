@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:52:20 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/26 17:37:07 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/28 00:40:00 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 	robert.polymorph(jim);
 	robert.polymorph(joe);
 
-	std::cout << "\nOld main: \n" << std::endl;
+	std::cout << "\nNew main: \n" << std::endl;
 
 	Sorcerer otro;
 	Victim victim;
