@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/18 17:04:30 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/27 20:58:10 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/28 00:49:42 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class Character: public ICharacter
 {
-	private:
+/*	private:
 		std::string 		name;
 		AMateria 			*slot[4];
 		int					checker[4];
@@ -36,7 +36,25 @@ class Character: public ICharacter
 		void				unequip(int idx);
 		void 				use(int idx, ICharacter &target);
 		void				setChecker(int idx);
-		int					getChecker(int idx) const;
+		int					getChecker(int idx) const;*/
+		private:
+	Character();
+
+	std::string name;
+	int equipped;
+	AMateria *inventory[4];
+public:
+	Character(std::string const &name);
+	Character(Character const &other);
+	virtual ~Character();
+
+	Character &operator=(Character const &other);
+
+	std::string const &getName(void) const;
+
+	void equip(AMateria *m);
+	void unequip(int idx);
+	void use(int idx, ICharacter &target);
 };
 
 #endif
