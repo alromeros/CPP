@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 11:24:20 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/27 21:12:30 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 12:12:18 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ int main(void)
 
 	IMateriaSource	*sphere = new MateriaSource();
 	AMateria		*source;
-	Character		*tidus = new Character("Tidus");
-	Character		*cloud = new Character("Cloud");
-	Character		*lightning = new Character("Lightning");
+	ICharacter		*tidus = new Character("Tidus");
+	ICharacter		*cloud = new Character("Cloud");
+	ICharacter		*lightning = new Character("Lightning");
 
 	sphere->learnMateria(new Ice());
 	sphere->learnMateria(new Cure());
@@ -71,7 +71,9 @@ int main(void)
 	cloud->use(0, *lightning);
 
 	source = sphere->createMateria("ultima");
-	tidus->equip(source);
+	AMateria *fuente = nullptr;
+	*fuente = *source;
+	tidus->equip(fuente);
 	tidus->use(1, *lightning);
 
 	delete sphere;
