@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 11:26:33 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/29 12:08:17 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:37:33 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class MateriaSource : public IMateriaSource
 	private:
 		AMateria **slot;
 	public:
-		~MateriaSource();
+		virtual ~MateriaSource();
 		MateriaSource();
 		MateriaSource( MateriaSource const &other );
 		MateriaSource& operator=( MateriaSource const &other );

@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 14:32:34 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/25 21:43:05 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:24:15 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ class RadScorpion: public Enemy // buen grupo
 	public:
 		RadScorpion();
 		RadScorpion( const RadScorpion& other );
-		~RadScorpion();
+		virtual ~RadScorpion();
 		RadScorpion& operator=( const RadScorpion& other );
-
 };
 
 #endif

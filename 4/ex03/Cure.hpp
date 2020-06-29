@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/18 18:04:13 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/26 13:56:04 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:25:27 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Cure: public AMateria
 		Cure();
 		Cure( const Cure& other );
 		Cure& operator=( const Cure& other );
-		~Cure();
+		virtual ~Cure();
 
 		AMateria* clone() const;
 		void use(ICharacter& target);

@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 16:09:07 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/06 19:35:21 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:24:26 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Victim
 	public:
 		Victim();
 		Victim( const Victim& other );
-		~Victim();
+		virtual ~Victim();
 		Victim& operator=( const Victim& other);
 
 		Victim(std::string const name);

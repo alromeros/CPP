@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 13:38:55 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/25 22:54:33 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:24:20 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Enemy
 		Enemy();
 		Enemy ( Enemy const& other );
 		Enemy& operator=( Enemy const &other );
+		
 		std::string virtual getType() const;
 		virtual void takeDamage(int);
 		void setHp( int hp );

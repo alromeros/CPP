@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 11:31:15 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/29 12:08:03 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:37:30 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ MateriaSource::MateriaSource( MateriaSource const &other )
 	for (int i = 0; i < 4; i++)
 	{
 		if (other.slot[i])
-			this->slot[i] = other.slot[i];
+			this->slot[i] = other.slot[i]->clone();
 		else
 			this->slot[i] = NULL;
 	}
@@ -49,7 +49,7 @@ MateriaSource& MateriaSource::operator=( MateriaSource const &other )
 	for (int i = 0; i < 4; i++)
 	{
 		if (other.slot[i])
-			this->slot[i] = other.slot[i];
+			this->slot[i] = other.slot[i]->clone();
 		else
 			this->slot[i] = NULL;
 	}

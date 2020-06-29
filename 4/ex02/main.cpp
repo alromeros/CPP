@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:03:36 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/26 17:36:54 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:48:02 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,10 @@ int main()
 	std::cout << truePatrullaCanina->push(labrador) << std::endl;
 	std::cout << truePatrullaCanina->push(NULL) << std::endl;
 
-	for (int i = 0; i < truePatrullaCanina->getCount(); ++i)
+	Squad reallyTruePatrullaCanina = *truePatrullaCanina;
+	for (int i = 0; i < reallyTruePatrullaCanina.getCount(); ++i)
 	{
-		ISpaceMarine* doggo = truePatrullaCanina->getUnit(i);
+		ISpaceMarine* doggo = reallyTruePatrullaCanina.getUnit(i);
 		doggo->battleCry();
 		doggo->rangedAttack();
 		doggo->meleeAttack();
@@ -66,5 +67,6 @@ int main()
 		delete doggo;
 	}
 	delete (truePatrullaCanina);
+
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/16 13:33:12 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/18 13:13:32 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:58:28 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,10 @@ void TacticalMarine::rangedAttack() const
 void TacticalMarine::meleeAttack() const
 {
 	std::cout << "* attacks with a chainsword *" << std::endl;
+}
+
+TacticalMarine& TacticalMarine::operator=( const TacticalMarine& copy )
+{
+	(void)copy;
+	return (*this);
 }

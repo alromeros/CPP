@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 14:19:39 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/29 12:13:58 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:37:35 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Character::Character( Character const &other )
 {
 	for (int i = 0; i < 4; i++)
 	{
-		this->slot[i] = other.getSlot(i);
+		this->slot[i] = other.getSlot(i)->clone();
 		checker[i] = 0;
 	}
 }

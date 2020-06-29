@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/06 14:53:17 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/06 19:03:30 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:24:29 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Sorcerer
 	public:
 		Sorcerer();
 		Sorcerer( const Sorcerer& other );
-		~Sorcerer();
+		virtual ~Sorcerer();
 		Sorcerer& operator=( const Sorcerer& other);
 
 		Sorcerer(std::string const name, const std::string title);

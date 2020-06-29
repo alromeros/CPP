@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:06:17 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/18 13:16:20 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 18:24:03 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Squad: public ISquad
 	public:
 		Squad();
 		Squad( Squad const &other );
-		~Squad();
+		virtual ~Squad();
 		Squad& 			operator=(Squad const &other );
 		
 		int				getCount() const;
