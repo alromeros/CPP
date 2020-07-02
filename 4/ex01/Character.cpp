@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/08 14:43:11 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/26 11:13:19 by alromero         ###   ########.fr       */
+/*   Updated: 2020/06/29 22:51:28 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void 				Character::attack(Enemy* enemy)
 		}
 	}
 }
+
 std::string			Character::getName() const
 {
 	return (this->name);

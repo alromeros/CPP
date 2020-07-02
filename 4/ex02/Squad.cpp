@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:17:15 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/29 19:02:32 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/02 16:35:23 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Squad::Squad()
 Squad::Squad( Squad const &other )
 :	count(0), unit(NULL)
 {
-	for (int i = 0; i < this->count; i++)
+	for (int i = 0; i < other.getCount(); i++)
 		this->push(other.getUnit(i)->clone());
 }
 
@@ -42,7 +42,7 @@ Squad& 			Squad::operator=(Squad const &other )
 		this->unit = NULL;
 	}
 	this->count = 0;
-	for (int i = 0; i < this->count; i++)
+	for (int i = 0; i < other.getCount(); i++)
 		this->push(other.getUnit(i)->clone());
 	return (*this);
 }

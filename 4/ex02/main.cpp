@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/09 13:03:36 by alromero          #+#    #+#             */
-/*   Updated: 2020/06/29 18:48:02 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/02 16:31:55 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ int main()
 	std::cout << truePatrullaCanina->push(NULL) << std::endl;
 
 	Squad reallyTruePatrullaCanina = *truePatrullaCanina;
+	std::cout << reallyTruePatrullaCanina.getCount() << std::endl;
 	for (int i = 0; i < reallyTruePatrullaCanina.getCount(); ++i)
 	{
 		ISpaceMarine* doggo = reallyTruePatrullaCanina.getUnit(i);
