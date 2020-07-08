@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 18:31:40 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 19:12:06 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:18:56 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,29 @@ int main()
 	delete otro;
 	delete otre;
 	delete error;
+
+	Intern *idiotOne = new Intern;
+	Bureaucrat  *hermes = new Bureaucrat("Hermes Conrad", 37);
+	Bureaucrat  *bob = new Bureaucrat("Bobby Bobson", 123);
+	OfficeBlock ob;
+
+	ob.setYo(idiotOne);
+	ob.setSuperiorSign(bob);
+	ob.setSuperiorExe(hermes);
+	try
+	{
+		ob.setSuperiorExe(bob);
+		ob.doBureaucracy("mutant pig termination", "Pigley");
+	}
+	catch(OfficeBlock::SameBureaucrats & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch(std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	delete idiotOne;
+	delete hermes;
+	delete bob;
 }
