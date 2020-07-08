@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 21:29:21 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 19:47:05 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 20:06:34 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ Form::FormNotSigned::FormNotSigned( const FormNotSigned &other )
 	this->error_message = other.error_message;
 }
 
-Form::FormNotSigned::~FormNotSigned()
+Form::FormNotSigned::~FormNotSigned() throw ()
 {
 
 }

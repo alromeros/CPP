@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 21:28:49 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 19:47:16 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 20:04:55 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ class Form
 			public:
 				FormNotSigned();
 				FormNotSigned( const FormNotSigned &other );
-				virtual ~FormNotSigned();
+				virtual ~FormNotSigned() throw ();
 				FormNotSigned& operator=( const FormNotSigned &other );
 
 				virtual const char* what() const throw ();

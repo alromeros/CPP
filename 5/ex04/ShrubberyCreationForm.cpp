@@ -6,13 +6,13 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 11:46:14 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 13:48:51 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 20:07:41 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-std::string const ShrubberyCreationForm::trees[3]
+std::string const ShrubberyCreationForm::trees[3] =
 {
 "\n \n "
 "	oxoxoo    ooxoo\n"

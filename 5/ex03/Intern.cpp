@@ -6,13 +6,13 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 12:08:36 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/07 21:20:09 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 20:07:17 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 
-std::string const Intern::keywords[6]
+std::string const Intern::keywords[6] =
 {
 	"shrubbery creation",
 	"shrubbery creation form",
