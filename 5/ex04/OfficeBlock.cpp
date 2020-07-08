@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 18:34:17 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 19:13:02 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:50:40 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ OfficeBlock::SameBureaucrats::SameBureaucrats( const SameBureaucrats &other )
 	this->error_message = other.error_message;
 }
 
-OfficeBlock::SameBureaucrats::~SameBureaucrats()
+OfficeBlock::SameBureaucrats::~SameBureaucrats() throw()
 {
 
 }
@@ -48,7 +48,7 @@ OfficeBlock::NullBureaucrat::NullBureaucrat( const NullBureaucrat &other )
 	this->error_message = other.error_message;
 }
 
-OfficeBlock::NullBureaucrat::~NullBureaucrat()
+OfficeBlock::NullBureaucrat::~NullBureaucrat() throw()
 {
 
 }
@@ -74,7 +74,7 @@ OfficeBlock::NullIntern::NullIntern( const NullIntern &other )
 	this->error_message = other.error_message;
 }
 
-OfficeBlock::NullIntern::~NullIntern()
+OfficeBlock::NullIntern::~NullIntern() throw()
 {
 
 }

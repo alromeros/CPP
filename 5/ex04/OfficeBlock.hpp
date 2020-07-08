@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/08 18:15:52 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 19:12:40 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:50:59 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class OfficeBlock
 			public:
 				NullBureaucrat();
 				NullBureaucrat( const NullBureaucrat &other );
-				virtual ~NullBureaucrat();
+				virtual ~NullBureaucrat() throw();
 				NullBureaucrat& operator=( const NullBureaucrat &other );
 				
 				virtual const char* what() const throw ();
@@ -56,7 +56,7 @@ class OfficeBlock
 			public:
 				NullIntern();
 				NullIntern( const NullIntern &other );
-				virtual ~NullIntern();
+				virtual ~NullIntern() throw();
 				NullIntern& operator=( const NullIntern &other );
 				
 				virtual const char* what() const throw ();
@@ -69,7 +69,7 @@ class OfficeBlock
 			public:
 				SameBureaucrats();
 				SameBureaucrats( const SameBureaucrats &other );
-				virtual ~SameBureaucrats();
+				virtual ~SameBureaucrats() throw();
 				SameBureaucrats& operator=( const SameBureaucrats &other );
 				
 				virtual const char* what() const throw ();

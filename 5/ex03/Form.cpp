@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 21:29:21 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 13:46:37 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:50:08 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Form::GradeTooHighException::GradeTooHighException( const GradeTooHighException 
 	this->error_message = other.error_message;
 }
 
-Form::GradeTooHighException::~GradeTooHighException()
+Form::GradeTooHighException::~GradeTooHighException() throw()
 {
 
 }
@@ -43,7 +43,7 @@ Form::GradeTooLowException::GradeTooLowException( const GradeTooLowException &ot
 	this->error_message = other.error_message;
 }
 
-Form::GradeTooLowException::~GradeTooLowException()
+Form::GradeTooLowException::~GradeTooLowException() throw()
 {
 
 }
@@ -64,7 +64,7 @@ Form::FormNotSigned::FormNotSigned( const FormNotSigned &other )
 	this->error_message = other.error_message;
 }
 
-Form::FormNotSigned::~FormNotSigned()
+Form::FormNotSigned::~FormNotSigned() throw()
 {
 
 }

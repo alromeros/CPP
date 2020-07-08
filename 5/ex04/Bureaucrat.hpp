@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 18:31:38 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 12:07:33 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:49:03 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Bureaucrat
 			public:
 				GradeTooLowException();
 				GradeTooLowException( const GradeTooLowException &other );
-				virtual ~GradeTooLowException();
+				virtual ~GradeTooLowException() throw();
 				GradeTooLowException& operator=( const GradeTooLowException &other );
 				
 				virtual const char* what() const throw ();
@@ -60,7 +60,7 @@ class Bureaucrat
 			public:
 				GradeTooHighException();
 				GradeTooHighException( const GradeTooHighException &other );
-				virtual ~GradeTooHighException();
+				virtual ~GradeTooHighException() throw();
 				GradeTooHighException& operator=( const GradeTooHighException &other );
 
 				virtual const char* what() const throw ();

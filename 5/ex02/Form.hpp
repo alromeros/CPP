@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 21:28:49 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 13:29:54 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:47:16 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ class Form
 			public:
 				GradeTooLowException();
 				GradeTooLowException( const GradeTooLowException &other );
-				virtual ~GradeTooLowException();
+				virtual ~GradeTooLowException() throw();
 				GradeTooLowException& operator=( const GradeTooLowException &other );
 				
 				virtual const char* what() const throw ();
@@ -64,7 +64,7 @@ class Form
 			public:
 				GradeTooHighException();
 				GradeTooHighException( const GradeTooHighException &other );
-				virtual ~GradeTooHighException();
+				virtual ~GradeTooHighException() throw();
 				GradeTooHighException& operator=( const GradeTooHighException &other );
 
 				virtual const char* what() const throw ();

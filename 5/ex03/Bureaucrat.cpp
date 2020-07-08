@@ -6,7 +6,7 @@
 /*   By: alromero <alromero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 18:31:32 by alromero          #+#    #+#             */
-/*   Updated: 2020/07/08 13:43:06 by alromero         ###   ########.fr       */
+/*   Updated: 2020/07/08 19:47:32 by alromero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Bureaucrat::GradeTooHighException::GradeTooHighException( const GradeTooHighExce
 	this->error_message = other.error_message;
 }
 
-Bureaucrat::GradeTooHighException::~GradeTooHighException()
+Bureaucrat::GradeTooHighException::~GradeTooHighException() throw()
 {
 
 }
@@ -49,7 +49,7 @@ Bureaucrat::GradeTooLowException::GradeTooLowException( const GradeTooLowExcepti
 	this->error_message = other.error_message;
 }
 
-Bureaucrat::GradeTooLowException::~GradeTooLowException()
+Bureaucrat::GradeTooLowException::~GradeTooLowException() throw()
 {
 
 }
