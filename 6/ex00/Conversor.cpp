@@ -170,7 +170,7 @@ void		Conversor::pseudoPrint()
 		this->litDouble = static_cast<double>(INFINITY * -1);
 		this->litFloat = static_cast<float>(INFINITY * -1);
 		// ... as a float
-		std::cout << "float: -inff" << "f" << std::endl;
+		std::cout << "float: -inff" << std::endl;
 		// ... as a double
 		std::cout << "double: -inf" << std::endl;
 	}
